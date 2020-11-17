@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Result</title>
+  </head>
+  <body>
+    <style media="screen">
+    body{
+      background-color: #EDEFED;
+      font-family: Space Mono,monospace;
+    }
+    .outside-wrapper {
+        padding: 20px 80px 20px;
+        border: 10px solid #4500ee;
+    }
+    #bottom{
+      border: none;
+      border-top: 2px dotted;
+    }
+    h3, i, a{
+      color: #4500ee;
+    }
+    h1, p, li{
+        color: #333;
+    }
+    </style>
+    <div class="outside-wrapper">
+      <h1>Heart Expert System</h1>
+      <hr><br>
+      <h3>Here's your report <i>{{patientName}}</i>:</h3>
+      <p>Could you have a heart condition? : <b>{{predict}}</b></p>
+      <p>Prediction probability that you have some heart condition is <b>{{predict_prob}}%</b></p>
+      <br><br>
+      <h3>A word of advice</h3>
+      <p>{{out_str}}</p>
+      <br><br>
+      <a href="/">Go Back</a>
+      <div class="footer">
+        <hr id="bottom">
+        <p align="center"><i>Powered by Artificial Intelligence <br>Designed by Himanshu, Harshit, Tarun and Yashashvi
+        </i></p>
+      </div>
+    </div>
+
+  </body>
+</html>

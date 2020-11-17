@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Heart Expert System</title>
+  </head>
+  <body>
+<style media="screen">
+body{
+  background-color: #EDEFED;
+  font-family: Space Mono,monospace;
+}
+h1, p, li{
+    color: #333;
+}
+input {
+    border-radius: 3px;
+    padding: 5px 10px;
+    border: 1px solid #4500ee;
+    margin-left: 10px;
+    font-family: monospace;
+}
+h3, i{
+  color: #4500ee;
+}
+button {
+  padding: 5px 15px;
+  margin-left: 10px;
+  color: #333;
+  font-family: Space Mono,monospace;
+}
+.outside-wrapper {
+    padding: 20px 80px 20px;
+    border: 10px solid #4500ee;
+}
+#bottom{
+  border: none;
+  border-top: 2px dotted;
+}
+ul{
+  list-style-type: none;
+}
+</style>
+<div class="outside-wrapper">
+    <h1>Heart Expert System</h1>
+    <hr>
+    <h3>Enter the following details:</h3>
+    <form class="" action="/" method="post">
+      <ol>
+      <li><label>Name: </label>
+      <input type="text" name="patientName" value=""></li>
+      <br>
+
+      <li><label>Age: </label>
+      <input type="number" name="age" value=""></li>
+      <br>
+        <li><label>Sex: </label>
+          <input type="checkbox" name="sex" value="Male">
+            <label>Male</label>
+          <input type="checkbox" name="sex" value="Female">
+        <label>Female</label></li>
+
+        <br>
+
+      <li><label>Chest Pain Type (select one): </label>
+        <br>
+        <ul>
+        <li >
+          <input type="checkbox" name="cp" value="cp_asymptomatic">
+          <label>Asymptotic </label>
+      </li>
+          <li>
+            <input type="checkbox" name="cp" value="cp_atypical angina">
+            <label>Atypical Angina </label>
+        </li>
+          <li>
+            <input type="checkbox" name="cp" value="cp_non-anginal">
+            <label>Non Anginal</label>
+          </li>
+          <li>
+            <input type="checkbox" name="cp" value="cp_typical angina">
+            <label>Typical Angina </label>
+        </li>
+
+        </ul>
+    </li>
+        <br>
+
+
+        <li><label>Resting Blood Pressure (in mm Hg on admission to hospital): </label>
+        <input type="number" name="trestbps" value=""></li>
+        <br>
+        <li><label>Fasting Blood Sugar(>120mg/dl)?: </label><br>
+          <input type="checkbox" name="fbs" value="True">
+          <label>Yes</label>
+          <input type="checkbox" name="fbs" value="False">
+          <label>No</label>
+        </li>
+        <br>
+
+        <li><label>Serum Cholestrol (in mg/dl) : </label>
+        <input type="number" name="chol" value=""></li><br>
+
+        <li><label>Resting Electrocardiographic Results: </label>
+          <ul>
+            <li>
+              <input type="checkbox" name="restecg" value="restecg_lv hypertrophy">
+              <label>Hypertrophy</label>
+          </li>
+            <li>
+              <input type="checkbox" name="restecg" value="restecg_normal">
+              <label>Normal</label>
+          </li>
+            <li>
+              <input type="checkbox" name="restecg" value="restecg_st-t abnormality">
+              <label>Abnormality</label>
+          </li>
+          </ul>
+          </li>
+          <br>
+
+        <li><label>Maximum Heart Rate Achieved: </label>
+        <input type="number" name="thalach" value=""></li><br>
+
+        <li><label>Excersice Induced Angina? </label>
+          <input type="checkbox" name="exang" value="True">
+          <label>Yes</label>
+          <input type="checkbox" name="exang" value="False">
+          <label>No</label>
+        </li><br>
+
+          <li><label>ST Depression Induced by Exercise Relative To Rest: </label>
+          <input type="number" name="oldpeak" value="" step="0.1"></li><br>
+
+          <li><label>Slope of the Peak Exercise in ST Segment: </label>
+            <ul>
+              <li>
+                <input type="checkbox" name="slope" value="slope_downsloping">
+                <label>Downsloping</label>
+            </li>
+              <li>
+                <input type="checkbox" name="slope" value="slope_flat">
+                <label>Flat</label>
+            </li>
+              <li>
+                <input type="checkbox" name="slope" value="slope_upsloping">
+                <label>Upsloping</label>
+            </li>
+            </ul>
+        </li><br>
+
+          <li><label>Number of Major Vessels (0-3) Colored by Flouroscopy: </label>
+            <input type="number" name="ca" value="">
+        </li><br>
+        <li><label>Thal:</label>
+        <ul>
+        <li>
+          <input type="checkbox" name="thal" value="thal_normal">
+          <label>Normal</label>
+        </li>
+          <li>
+            <input type="checkbox" name="" value="thal_fixed_defect">
+            <label>Fixed Defect</label>
+        </li>
+          <li>
+            <input type="checkbox" name="thal" value="thal_reversable_defect">
+            <label>Reversible Defect</label>
+        </li>
+        </ul>
+      </li><br>
+    </ol>
+        <button type="submit" name="submit">Predict</button>
+    </form>
+<br>
+<hr id="bottom">
+
+<p align="center"><i>Powered by Artificial Intelligence <br>Designed by Himanshu, Harshit, Tarun and Yashashvi
+</i></p>
+</div>
+
+
+    <script type="text/javascript">
+
+    var checkboxes = document.getElementsByTagName('input');
+
+for (var i=0; i<checkboxes.length; i++)  {
+  if (checkboxes[i].type == 'checkbox')   {
+    checkboxes[i].checked = false;
+  }
+}
+    </script>
+  </body>
+</html>
